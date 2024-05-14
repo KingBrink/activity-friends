@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-self:center;
+    margin-block: 1rem;
+}
+.wrapper {
+    width: 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: .2rem;
+    background-image: linear-gradient(to bottom, blue, blue);
+    padding-block: .2rem;
+
+    & label {
+        color: antiquewhite;
+        filter: drop-shadow(.1rem .2rem .2rem black);
+    }
+
+    & :is(input[type='text'], button){
+        box-shadow: .1rem .1rem .1rem rgb(72, 72, 196);
+    }
+
+    & button:hover {
+        box-shadow: unset;
+    }
+}
